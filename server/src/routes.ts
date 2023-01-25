@@ -78,7 +78,7 @@ export async function appRoutes(app: FastifyInstance) {
     }
   });
 
-  app.post("/habits/:id/toggle", async (req, res) => {
+  app.patch("/habits/:id/toggle", async (req, res) => {
     const toggleHabitParams = z.object({
       id: z.string().uuid(),
     });
